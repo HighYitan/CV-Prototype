@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ES-es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
-    <title>Curriculum Vitae</title>
+    <title>Curriculum Vitae - Presentación</title>
     <style>
         *{
             font-family: 'Germania One', sans-serif;
@@ -38,13 +38,21 @@
             }
         }
         p{
-            /*font-size: 30px;
-            */
             margin: 0;
         }
         body.bg-dark.bg-gradient {
             background: linear-gradient(225deg, #700000, #000000) !important;
+            height: 100%;
         }
+        html{
+            background: linear-gradient(225deg, #700000, #000000) !important;
+            
+        }
+        /*@media (min-width: 900px) {
+            html {
+                height: 100%;
+            }
+        }*/
         a.btn-info{
             background: linear-gradient(225deg, #7000ff, #000000) !important;
             border-color: #000000 !important;
@@ -62,10 +70,12 @@
             text-decoration: none !important;
         }
         .loadingScreen {
-            position: absolute;
+            position: fixed;
             z-index: 5;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 125%;
+            height: 100%;
             background: linear-gradient(225deg, #700000, #000000) !important;
             display: flex;
             align-items: center;
@@ -86,7 +96,7 @@
             window.addEventListener('load', function() {
             setTimeout(function() {
                 loadingScreen.style.display = 'none';
-            }, 2000); // 3000 milliseconds = 3 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
     });
         });
     </script>
@@ -95,7 +105,7 @@
     <div class="loadingScreen">
         <img class="spin" src="./assets/img/Black_Sun.svg.png" alt="loading">
     </div>
-    <div class="container-sm mt-3">
+    <div class="container-sm mt-2 d-flex flex-column min-vh-100">
         <header class="d-flex justify-content-center">
             <div id="rombo">
                 <img class="img-fluid" src="./assets/img/image_480.png" alt="foto">
@@ -104,42 +114,41 @@
         <main class="my-3">
             <div class="row my-4 justify-content-center">
                 <p class="text-center text-lg-start text-white">¡Bienvenido a mi currículum vitae, aquí podrás encontrar información sobre mi formación académica,
-                    experiencia laboral, habilidades/biografía y mucho más! Si deseas ponerte en contacto conmigo, puedes hacerlo a través del apartado "Información de contacto".
-
+                    experiencia laboral, habilidades/biografía y mucho más! Si deseas ponerte en contacto conmigo, puedes hacerlo a través del apartado "Información de contacto". <br><br>
+                    Soy Khris, desarrollador backend junior, con conocimientos en Java, PHP, MySQL, HTML, CSS, JavaScript, JQuery, React, Bootstrap, SASS, Git, GitHub, entre otros. ¡Espero que disfrutes de mi CV!
                 </p> 
-                </p>
             </div>
             <div class="row my-4">
                 <div class="col d-flex justify-content-center">
-                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
-                        <p>Estudios <br> académicos</p>
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="estudios.html">
+                        <p>Estudios <br> Académicos</p>
                         <p class="bi bi-book mt-3"></p>
                     </a>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
-                        <p>Experiencia <br> laboral</p>
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="experiencia.html">
+                        <p>Experiencia <br> Laboral</p>
                         <p class="bi bi-hammer mt-3"></p>
                     </a>
                 </div>
             </div>
             <div class="row my-4">
                 <div class="col d-flex justify-content-center">
-                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
-                        <p>Habilidades <br> y biografía</p>
+                    <a class="btn btn-info rounded-pill btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="habilidades.html">
+                        <p>Habilidades <br> y Biografía</p>
                         <p class="bi bi-person-arms-up mt-3"></p>
                     </a>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <a class="btn btn-info rounded-circle btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="#">
-                        <p>Información <br> de contacto</p>
+                    <a class="btn btn-info rounded-circle btn-sm d-flex flex-column align-items-center justify-content-center text-white" href="contacto.html">
+                        <p>Información <br> de Contacto</p>
                         <p class="bi bi-journal-bookmark-fill mt-3"></p>
                     </a>
                 </div>
             </div>
         </main>
-        <hr class="border border-light border-top border-3 my-0">
-        <footer class="row text-white text-center d-flex align-items-center">
+        <footer class="row text-white text-center d-flex align-items-center mt-auto">
+            <hr class="border border-light border-top border-3 my-0">
             <span class="col-8 col-md-6">© 2024 Fedora Team</span>
             <a class="col-3 col-md-6 bi bi-github link-light d-flex align-items-center justify-content-center" style="height: 62px" href="#"></a>
         </footer>
