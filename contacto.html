@@ -66,6 +66,17 @@
             animation: spin 1s linear infinite;
             width: 50%;
         }
+        @media (max-width: 768px) {
+            .spin {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .spin {
+                width: 90%;
+            }
+        }
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -76,9 +87,9 @@
         .breadcrumb-item + .breadcrumb-item::before {
             color:white;
         }
-        img {
-        width: 200px; /* Adjust the size as needed */
-        height: 100px; /* Adjust the size as needed */
+        a img{
+            width: 200px;
+            height: 100px;
         }
     </style>
     <script>
@@ -87,7 +98,7 @@
             window.addEventListener('load', function() {
                 setTimeout(function() {
                     loadingScreen.style.display = 'none';
-                }, 0); // 2000 milliseconds = 2 seconds
+                }, 2000); // 2000 milliseconds = 2 seconds
             });
         });
     </script>
@@ -141,7 +152,7 @@
             <div class="row text-white text-center my-2">
                 <h3>Puedes contactarme a través de los siguientes medios</h3>
             </div>
-            <div class="d-grid row gap-2 d-md-flex my-3">
+            <div class="d-grid row gap-2 d-md-flex my-3 mx-1">
                 <a href="mailto:cfl01@iesemilidarder.com" class="btn btn-dark col d-flex align-items-center justify-content-center">Envíame un correo electrónico</a>
                 <a class="btn btn-dark col d-flex align-items-center justify-content-center" href="tel:713-992-0916">
                     Llamar<span class="bi bi-telephone-inbound-fill" style="padding-left:10px; padding-right:10px;"></span>+34 666 333 999
@@ -150,7 +161,7 @@
                     <img src="./assets/img/linkedin.png" class="img-fluid px-2" alt="Mi LinkedIn">
                 </a>
             </div>
-            <div class="row text-white text-center my-2">
+            <div class="row text-white text-center mt-4 mb-3">
                 <h3>¡También puedes mandarme un mensaje directo a mi correo personal rellenando el siguiente formulario!</h3>
             </div>
             <div class="my-3">
