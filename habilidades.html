@@ -24,10 +24,6 @@
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
         }
-        /*html{
-            background: linear-gradient(225deg, #700000, #000000) !important;
-            height: 100%;
-        }*/
         a.btn-dark{
             background-color: #7000ff !important;
         }
@@ -78,7 +74,6 @@
                 width: 70%;
             }
         }
-
         @media (max-width: 576px) {
             .spin {
                 width: 90%;
@@ -94,8 +89,11 @@
         .breadcrumb-item + .breadcrumb-item::before {
             color:white;
         }
-        .d-block{
-
+        .carousel-item {
+            height: 40vh;
+        }
+        img.d-block{
+            height: 100%;
         }
     </style>
     <script>
@@ -104,7 +102,7 @@
             window.addEventListener('load', function() {
                 setTimeout(function() {
                     loadingScreen.style.display = 'none';
-                }, 0); // 2000 milliseconds = 2 seconds
+                }, 2000); // 2000 milliseconds = 2 seconds
             });
         });
     </script>
@@ -122,7 +120,7 @@
                     <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
-                        <a type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="bi bi-person-arms-up px-1"></span>Habilidades/Biografía<span class="bi bi-fingerprint px-1"></span>
                         </a>
                         <ul class="dropdown-menu bg-dark text-center">
@@ -159,10 +157,67 @@
                 <h3>Habilidades Innatas</h3>
             </div>
             <div class="text-white text-center my-2">
-                <p>Perfeccionismo</p>
-                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
-                </div>
+                <table class="table table-striped table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Habilidad</th>
+                            <th scope="col">Explicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="align-middle">1</th>
+                            <td class="align-middle">Perfeccionismo</td>
+                            <td class="align-middle">Siempre me gusta pulir todo hasta la perfección lo cual aumenta la calidad de lo que hago pero puede reducir la velocidad si son detalles muy mínimos</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">2</th>
+                            <td class="align-middle">Aprendizaje rápido</td>
+                            <td class="align-middle">Desde que tengo uso de razón he tenido cierta fácilidad para el aprendizaje</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">3</th>
+                            <td class="align-middle">Reconocimiento de patrones</td>
+                            <td class="align-middle">Reconozco patrones en la mayoría de cosas, tanto en la lógica como de conducta</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">4</th>
+                            <td class="align-middle">Creatividad</td>
+                            <td class="align-middle">Tengo una creatividad por mi gran imaginación y gran fantasía que dentro de mi mente se halla por tanto si faltan ideas siempre puedo aportar alguna cosa</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">5</th>
+                            <td class="align-middle">Cohesión de grupo</td>
+                            <td class="align-middle">Suelo ser la voz que cohesiona el grupo y lo mantiene unido</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">6</th>
+                            <td class="align-middle">Trabajar en equipo</td>
+                            <td class="align-middle">Si hay una buena organización y quedan claro los roles de cada uno se me hace fácil trabajar en equipo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">7</th>
+                            <td class="align-middle">Optimismo y realismo</td>
+                            <td class="align-middle">Nunca pierdo la esperanza de que algo pueda conseguirse pero al mismo tiempo tengo en cuenta las limitaciones que pueda haber</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">8</th>
+                            <td class="align-middle">Facilidad para la lógica y la abstracción</td>
+                            <td class="align-middle">Soy capaz de resolver grandes problemas partiéndolos en problemas menores a resolver</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">9</th>
+                            <td class="align-middle">Cabezonería</td>
+                            <td class="align-middle">Nunca me rindo hasta conseguir lo que debo hacer aunque puede ser contraproducente si me empeño en una tarea concreta</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">10</th>
+                            <td class="align-middle">Elegancia</td>
+                            <td class="align-middle">Además de elegancia en el exterior y en mi forma de hablar también puedo ser elegante al escribir código siempre y cuando tenga unos buenos conocimientos previos del lenguaje</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="row text-white text-center mt-4 mb-3">
                 <h3>Habilidades Adquiridas</h3>
@@ -170,42 +225,367 @@
             <div class="my-3">
                 <div id="adquiridas" class="carousel slide">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="java"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="1" aria-label="php"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="2" aria-label="codeigniter"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="3" aria-label="laravel"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="4" aria-label="mysql"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="5" aria-label="c#"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="6" aria-label="python"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="7" aria-label="npm"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="8" aria-label="github"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="9" aria-label="html5"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="10" aria-label="css3"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="11" aria-label="sass"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="12" aria-label="bootstrap5"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="13" aria-label="tailwindcss3"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="14" aria-label="javascript"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="15" aria-label="jquery"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="16" aria-label="angular"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="17" aria-label="react"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="18" aria-label="apache2"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="19" aria-label="tomcat"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="20" aria-label="sysadminlinux"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="21" aria-label="hacker"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="22" aria-label="repararpc"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="23" aria-label="videojuegos"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="24" aria-label="video"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="25" aria-label="imagen"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="26" aria-label="modelado3d"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="27" aria-label="matemáticas"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="28" aria-label="castellano"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="29" aria-label="catalán"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="30" aria-label="inglés"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="31" aria-label="alemán"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="32" aria-label="italiano"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="33" aria-label="ruso"></button>
+                        <button type="button" data-bs-target="#adquiridas" data-bs-slide-to="34" aria-label="finés"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/img/image_480.png" class="d-block w-100" alt="...">
+                            <img src="./assets/img/java.png" class="d-block w-100" alt="Java">
                             <div class="carousel-caption d-block text-dark">
                                 <h5>Java</h5>
-                                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+                                <div class="progress" role="progressbar" aria-label="java" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
                                 </div>
                             </div>
                         </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div class="carousel-item">
+                            <img src="./assets/img/php.webp" class="d-block w-100" alt="PHP">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>PHP</h5>
+                                <div class="progress" role="progressbar" aria-label="php" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 90%">90%</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="carousel-item">
+                            <img src="./assets/img/codeigniter.png" class="d-block w-100" alt="Laravel">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>CodeIgniter</h5>
+                                <div class="progress" role="progressbar" aria-label="laravel" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 30%">30%</div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/laravel.jpg" class="d-block w-100" alt="Laravel">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Laravel</h5>
+                                <div class="progress" role="progressbar" aria-label="laravel" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/mysql.png" class="d-block w-100" alt="MySQL">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>MySQL</h5>
+                                <div class="progress" role="progressbar" aria-label="mysql" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/csharp.jpg" class="d-block w-100" alt="C#">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>C#</h5>
+                                <div class="progress" role="progressbar" aria-label="C#" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 10%">10%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/Python.jpg" class="d-block w-100" alt="Python">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Python</h5>
+                                <div class="progress" role="progressbar" aria-label="python" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/nodeynpm.png" class="d-block w-100" alt="npm">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Node y npm</h5>
+                                <div class="progress" role="progressbar" aria-label="npm" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 65%">65%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/gitygithub.png" class="d-block w-100" alt="Github">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Git y Github</h5>
+                                <div class="progress" role="progressbar" aria-label="github" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/html5.png" class="d-block w-100" alt="HTML5">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>HTML 5</h5>
+                                <div class="progress" role="progressbar" aria-label="html5" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/css3.jpg" class="d-block w-100" alt="CSS3">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>CSS 3</h5>
+                                <div class="progress" role="progressbar" aria-label="css3" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 95%">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/sass.jpg" class="d-block w-100" alt="SASS">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>SASS</h5>
+                                <div class="progress" role="progressbar" aria-label="sass" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 70%">70%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/bootstrap5.png" class="d-block w-100" alt="Bootstrap5">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Bootstrap 5</h5>
+                                <div class="progress" role="progressbar" aria-label="bootstrap5" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 90%">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/tailwindcss3.jpg" class="d-block w-100" alt="Tailwindcss3">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Tailwind CSS 3</h5>
+                                <div class="progress" role="progressbar" aria-label="html5" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 10%">10%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/javascript.jpg" class="d-block w-100" alt="Javascript">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Javascript</h5>
+                                <div class="progress" role="progressbar" aria-label="javascript" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 40%">40%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/jquery.jpg" class="d-block w-100" alt="jQuery">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>jQuery</h5>
+                                <div class="progress" role="progressbar" aria-label="jquery" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/angular.png" class="d-block w-100" alt="Angular">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Angular</h5>
+                                <div class="progress" role="progressbar" aria-label="angular" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 20%">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/react.png" class="d-block w-100" alt="React">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>React</h5>
+                                <div class="progress" role="progressbar" aria-label="react" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 45%">45%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/apache2.png" class="d-block w-100" alt="Apache 2">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Apache 2</h5>
+                                <div class="progress" role="progressbar" aria-label="apache2" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/tomcat.webp" class="d-block w-100" alt="Tomcat">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Tomcat</h5>
+                                <div class="progress" role="progressbar" aria-label="tomcat" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 55%">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/sysadminlinux.webp" class="d-block w-100" alt="Systemadminlinux">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Administrador de Sistemas en Linux</h5>
+                                <div class="progress" role="progressbar" aria-label="sysadminlinux" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/hackerobot.webp" class="d-block w-100" alt="Hacker Robot">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Hacker</h5>
+                                <div class="progress" role="progressbar" aria-label="hacker" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 30%">30%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/repararpc.webp" class="d-block w-100" alt="PC destruido">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Reparación y Mantenimiento de Ordenadores</h5>
+                                <div class="progress" role="progressbar" aria-label="repararpc" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/videogame.jpg" class="d-block w-100" alt="Videojuegos">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Videojuegos</h5>
+                                <div class="progress" role="progressbar" aria-label="videojuegos" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/videoediting.webp" class="d-block w-100" alt="Editar videos">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Edición de vídeos</h5>
+                                <div class="progress" role="progressbar" aria-label="video" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/imagedit.jpg" class="d-block w-100" alt="Editar imagen">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Edición de imágenes</h5>
+                                <div class="progress" role="progressbar" aria-label="imagen" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/model3d.webp" class="d-block w-100" alt="Modelo 3D">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Modelado 3D</h5>
+                                <div class="progress" role="progressbar" aria-label="modelado3d" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 35%">35%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/maths.jpg" class="d-block w-100" alt="Matemáticas">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Matemáticas</h5>
+                                <div class="progress" role="progressbar" aria-label="matemáticas" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/castellano.webp" class="d-block w-100" alt="Bandera castellana">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Castellano</h5>
+                                <div class="progress" role="progressbar" aria-label="castellano" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/reinomallorca.png" class="d-block w-100" alt="Bandera mallorca">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Catalán</h5>
+                                <div class="progress" role="progressbar" aria-label="catalan" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 60%">60%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/england.jpg" class="d-block w-100" alt="Bandera inglesa">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Inglés</h5>
+                                <div class="progress" role="progressbar" aria-label="ingles" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 100%">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/Prussia.png" class="d-block w-100" alt="Bandera prusiana">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Alemán</h5>
+                                <div class="progress" role="progressbar" aria-label="alemán" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 15%">15%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/reinoitalia.jpg" class="d-block w-100" alt="Bandera italiana">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Italiano</h5>
+                                <div class="progress" role="progressbar" aria-label="italiano" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/russianempire.webp" class="d-block w-100" alt="Bandera rusa">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Ruso</h5>
+                                <div class="progress" role="progressbar" aria-label="ruso" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 35%">35%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/finland.jpg" class="d-block w-100" alt="Bandera finesa">
+                            <div class="carousel-caption d-block text-dark">
+                                <h5>Finés</h5>
+                                <div class="progress" role="progressbar" aria-label="finés" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 10%">10%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#adquiridas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#adquiridas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#adquiridas" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#adquiridas" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
         </main>

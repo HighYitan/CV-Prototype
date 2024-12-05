@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
-    <title>Curriculum Vitae - Experiencia</title>
+    <title>Curriculum Vitae - Personalidad</title>
     <style>
         *{
             font-family: 'Germania One', sans-serif;
@@ -20,15 +20,17 @@
         p{
             margin: 0;
         }
-
         body.bg-dark.bg-gradient {
             background: linear-gradient(225deg, #700000, #000000) !important;
             height: 100%;
         }
-        .btn-group a{
+        a.btn-dark{
             background-color: #7000ff !important;
         }
-        .btn-group a.active{
+        a.btn-dark:hover{
+            background-color: #5000b8 !important;
+        }
+        a.btn-dark.active{
             background-color: #5000b8 !important;
         }
         button.btn-dark{
@@ -43,6 +45,9 @@
         }
         .dropdown-menu{
             background-color: #7000ff !important;
+        }
+        .dropdown-item.text-white.active{
+            background-color: #5000b8 !important;
         }
         a.bi{
             font-size: 30px;
@@ -69,7 +74,6 @@
                 width: 70%;
             }
         }
-
         @media (max-width: 576px) {
             .spin {
                 width: 90%;
@@ -84,6 +88,17 @@
         }
         .breadcrumb-item + .breadcrumb-item::before {
             color:white;
+        }
+        .nav-link.active{
+            color: #000000 !important;
+        }
+        .list-group-item{
+            background-color: #7000ff !important;
+            border-color: black;
+        }
+        .list-group-item.active{
+            background-color: #5000b8 !important;
+            border-color: #7000ff !important;
         }
     </style>
     <script>
@@ -107,7 +122,7 @@
                 <div class="btn-group d-flex flex-column flex-sm-row" role="group" aria-label="Button group with nested dropdown">
                     <a href="index.html" class="btn btn-dark"><p class="bi bi-house-door-fill"></p></a>
                     <a href="estudios.html" class="btn btn-dark"><span class="bi bi-book px-1"></span>Estudios<span class="bi bi-book px-1"></span></a>
-                    <a href="experiencia.html" class="btn btn-dark active"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
+                    <a href="experiencia.html" class="btn btn-dark"><span class="bi bi-hammer px-1"></span>Experiencia<span class="bi bi-hammer px-1"></span></a>
                 
                     <div class="btn-group dropdown-center" role="group">
                         <a href="" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,7 +136,7 @@
                             <li><h6 class="dropdown-header text-white fs-4">Personal</h6></li>
                             <li><hr class="dropdown-divider border-light"></li>
                             <li><a class="dropdown-item text-dark" href="biografia.html"><span class="bi bi-fingerprint px-1"></span>Biografía<span class="bi bi-fingerprint px-1"></span></a></li>
-                            <li><a class="dropdown-item text-dark" href="personalidad.html"><span class="bi bi-person-raised-hand px-1"></span>Personalidad<span class="bi bi-person-raised-hand px-1"></span></a></li>
+                            <li><a class="dropdown-item text-white active" href="personalidad.html"><span class="bi bi-person-raised-hand px-1"></span>Personalidad<span class="bi bi-person-raised-hand px-1"></span></a></li>
                             <li><a class="dropdown-item text-dark" href="aficiones.html"><span class="bi bi-joystick px-1"></span>Aficiones<span class="bi bi-joystick px-1"></span></a></li>
                         </ul>
                     </div>
@@ -132,84 +147,38 @@
                 <nav class="divisor" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html" style="color:#7000ff">Presentación</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Experiencia</li>
+                        <li class="breadcrumb-item active" aria-current="page">Personalidad</li>
                     </ol>
                 </nav>
             </div>
             <div class="row text-white text-center">
-                <p class="bi bi-hammer my-3 fs-1"></p>
-                <h1>Experiencia Laboral</h1>
+                <p class="bi bi-person-raised-hand my-3 fs-1"></p>
+                <h1>Rasgos propios de personalidad</h1>
                 <hr class="border border-light border-top border-3 my-0">
             </div>
         </header>
         <main class="my-3">
-            <div class="row my-3">
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#kitmaker" aria-expanded="false" aria-controls="kitmaker">
-                        Kitmaker
-                    </button>
-                    <div class="collapse" id="kitmaker">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://x.com/kitmaker">
-                                <img src="./assets/img/kitmaker.jpg" class="card-img-top px-2" alt="Kitmaker">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Vídeojuegos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span>Trabajé como programador y sysadmin junior</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2016-2016 (Unos meses)</p>
-                            </div>
-                        </div>
+            <div class="text-white text-center my-2">
+                <div class="row">
+                    <div class="col-4">
+                      <div id="listing" class="list-group">
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-1">Impasibilidad</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-2">Amabilidad</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-3">Competitivo</a>
+                        <a class="list-group-item list-group-item-action px-0" href="#list-item-4">Honorable</a>
+                      </div>
                     </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#antiguo" aria-expanded="false" aria-controls="antiguo">
-                        El Antiguo
-                    </button>
-                    <div class="collapse" id="antiguo">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://archive.org/details/adolfhitlerthegreateststorynevertoldfull6hoursdocumentary_201909">
-                                <img src="./assets/img/antiguo.webp" class="card-img-top px-2" alt="El Antiguo">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Culto y servidumbre eternos</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Nigromante y salvador de la humanidad por medio de las direcciones de El Antiguo</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2017-???? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#jinroh" aria-expanded="false" aria-controls="jinroh">
-                        Jin-Roh
-                    </button>
-                    <div class="collapse" id="jinroh">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/Jin_Roh.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Organización paramilitar</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Purgador de disidencia en la Brigada del Lobo e Inteligencia</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2019-20?? (Sigue en curso)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-grid text-white text-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#shinmegamitensei" aria-expanded="false" aria-controls="shinmegamitensei">
-                        DDS-Net
-                    </button>
-                    <div class="collapse" id="shinmegamitensei">
-                        <div class="card bg-dark col-sm">
-                            <a href="https://ca.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade">
-                                <img src="./assets/img/shinmegamitensei.jpg" class="card-img-top px-2" alt="Jin-Roh">
-                            </a>
-                            <div class="card-body d-grid align-items-center justify-content-center">
-                                <p class="card-text text-white text-center"><span class="text-danger">Tipo de Empresa:</span> Aplicaciones de Invocación Demoníaca</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Roles desempeñados:</span> Invocador de demonios para salvar el mundo de su invasión, guerrero, programador</p>
-                                <p class="card-text text-white text-center"><span class="text-danger">Tiempo trabajado:</span> 2020-21?? (Sigue en curso)</p>
-                            </div>
-                        </div>
+                    <div class="col-8">
+                      <div data-bs-spy="scroll" data-bs-target="#listing" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0" style="height: 300px; overflow-y: auto;">
+                        <h2 id="list-item-1">Impasibilidad</h2>
+                        <p class="mt-5">Suelo ser indiferente e imperturbable ante cualquier cosa a menos que activamente quiera dejar de serlo, tengo un gran control sobre mi mismo. Me gusta la paz y la tranquilidad por sobre todas las cosas.</p>
+                        <h2 id="list-item-2" class="mt-5">Amabilidad</h2>
+                        <p class="mt-5">Siempre trato de ver el mejor lado de los demás y ayudar cuando realmente puedo permitírmelo a mi mismo pero sin dejar que se aprovechen de mi ni de quienes me rodean por ser demasiado amables.</p>
+                        <h2 id="list-item-3" class="mt-5">Competitivo</h2>
+                        <p class="mt-5">Es una de las razones de mi perfeccionismo, siempre me ha gustado ser el mejor en todo lo que hago a ser posible aunque me lleve más tiempo y esfuerzo que a los demás siempre puedo intentar hacerlo mejor.</p>
+                        <h2 id="list-item-4" class="mt-5">Honorable</h2>
+                        <p class="mt-5">Nunca me ha gustado jugar sucio o ganar con ventajas injustas a los demás, me gusta el juego limpio y con honor ya que tener valores morales no tiene precio, desde luego los míos no, no puedo ser comprado por tanto puedo decir que soy alguien de fiar en cualquier situación.</p>
+                      </div>
                     </div>
                 </div>
             </div>
